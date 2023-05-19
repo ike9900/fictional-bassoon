@@ -1,0 +1,85 @@
+/***********************   GIT初始化  *****************************/
+git config --global user.name 		//初始化用户名
+git config --global user.email 		//初始化邮箱
+git config --global credential.helper store   	//自动登录
+git config --global --list		  	//查看信息
+/***********************  GIT命令   *****************************/
+git init 					//创建仓库
+git status					//查看仓库的状态
+git status -s				//查看仓库的简略状态
+
+git add					//添加到暂存区
+git add *.后缀名				//*后的后缀类型全部添加到暂存区
+git add .					//当前目录下的文件全部放入暂存区
+
+git commit				//提交
+git commit -m “提交的信息”
+git commit -am 				//把add和commit合并
+
+git log 					//查看提交日志
+git log --oneline				//查看提交版本，查看版本号
+
+git reset	--soft/hard/mixed	版本号			//回退版本：全部保留/全部丢弃/只保留工作区
+git ls-files				//查看版本库文件
+git reflog					//查看操作记录
+
+git diff					//查看工作区和暂存区差异
+git diff HEAD 				//查看版本库和工作区差异
+git diff --cached				//查看版本库和暂存区的差异
+git diff 版本id 版本id			//两次版本的差异
+git diff HEAD^ HEAD			//比较上一个版本和当前版本的差异
+git diff HEAD~数字 HEAD			//比较上几个版本和当前版本的差异
+git diff HEAD~ HEAD 文件名			//比较上一个版本和当前版本的 哪个文件的差异
+
+git rm <file>				//删除工作区和暂存区文件			删除后不要忘记提交
+git rm --cached <file>			//删除版本库的文件				删除后不要忘记提交
+git rm -r*					//递归删除某个目录下的所有子目录和文件	删除后不要忘记提交					 
+
+git ignore				//不提交其中文件
+		
+git push					//推送本地仓库到远程仓库
+git pull					//
+
+git remote add origin git@github.com:ike9900/first-repo.git	//设置远程仓库别名
+gitbranch -M 名称				//指定分支名称
+git push -u origin main			//关联mian分支
+
+git remote -v				//查看当前仓库对应的远程仓库别名
+/*********************** linux命令    *****************************/
+mkdir 					//创建文件
+echo "文件内容" > 文件名.后缀 		//创建一个文件并回显
+echo <file> > .文件				//添加文件到一个文件中
+
+ls					//显示文件
+ls -ltr					//
+rm					//删除
+rm -f 文件名.后缀				//删除文件
+cp -rf 文件名.后缀				//复制文件
+cat 文件名.后缀				//查看文件内容
+
+
+
+
+
+
+注意： 没有host文件可以使用此命令 输入yes     ssh -T git@github.com
+
+
+此命令可生成密钥 （邮箱自行填写）         ssh-keygen -t rsa -C "2495351228@qq.com"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
